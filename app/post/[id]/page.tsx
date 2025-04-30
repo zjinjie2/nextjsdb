@@ -19,8 +19,6 @@ async function getData(id: string) {
   return data;
 }
 
-// type Params = Promise<{ id: string }>;
-// type Params = { id: string };
 interface PageProps {
   params: {
     id: string;
