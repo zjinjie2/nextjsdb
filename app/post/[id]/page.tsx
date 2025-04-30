@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
+export const revalidate = 200;
+
 async function getData(id: string) {
   const data = await prisma.blogPost.findUnique({
     where: {
