@@ -19,7 +19,8 @@ async function getData(id: string) {
   return data;
 }
 
-type Params = Promise<{ id: string }>;
+// type Params = Promise<{ id: string }>;
+type Params = { id: string };
 
 export default async function IdPage({ params }: { params: Params }) {
   const { id } = params;
