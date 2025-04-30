@@ -19,16 +19,10 @@ async function getData(id: string) {
   return data;
 }
 
-// type Params = Promise<{ id: string }>;
-// type Params = { id: string };
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
+type Params = Promise<{ id: string }>;
 
-export default async function IdPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default async function IdPage({ params }: { params: Params }) {
+  const { id } = await params;
   const data = await getData(id);
 
   return (
